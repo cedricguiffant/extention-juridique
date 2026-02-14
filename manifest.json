@@ -1,9 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Légifrance Express",
+  "name": "Legifrance Express",
   "version": "1.0.0",
-  "description": "Sélectionnez un texte et appuyez sur Entrée pour rechercher sur Légifrance",
-  "permissions": ["activeTab", "contextMenus"],
+  "description": "Selectionnez un texte et appuyez sur Entree pour rechercher sur Legifrance",
+  "permissions": [
+    "activeTab",
+    "contextMenus"
+  ],
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -19,9 +22,15 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content/content.js"],
-      "css": ["content/content.css"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content/content.js"
+      ],
+      "css": [
+        "content/content.css"
+      ]
     }
   ],
   "background": {
