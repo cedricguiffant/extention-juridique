@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Légifrance Express</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="28" height="28" rx="6" fill="#000091"/>
+          <path d="M8 20V8h2v10h6v2H8z" fill="#fff"/>
+          <path d="M17 8h2v12h-2V8z" fill="#E1000F"/>
+        </svg>
+      </div>
+      <div class="title-group">
+        <h1>Légifrance Express</h1>
+        <p class="subtitle">Recherche juridique rapide</p>
+      </div>
+    </header>
+
+    <div class="search-section">
+      <div class="input-wrapper">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="6.5" cy="6.5" r="5.5" stroke="#9a9a9a" stroke-width="1.5"/>
+          <line x1="10.5" y1="10.5" x2="15" y2="15" stroke="#9a9a9a" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Terme juridique..." autofocus>
+      </div>
+      <button id="searchBtn" type="button">Rechercher</button>
+    </div>
+
+    <div class="info">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <circle cx="7" cy="7" r="6" stroke="#666" stroke-width="1"/>
+        <text x="7" y="10.5" text-anchor="middle" font-size="9" fill="#666" font-family="serif" font-weight="bold">i</text>
+      </svg>
+      <span>Sélectionnez du texte sur une page et appuyez sur <kbd>Entrée</kbd> pour lancer la recherche.</span>
+    </div>
+
+    <div id="history" class="history hidden">
+      <h2>Recherches récentes</h2>
+      <ul id="historyList"></ul>
+    </div>
+
+    <footer>
+      <span class="footer-text">legifrance.gouv.fr</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

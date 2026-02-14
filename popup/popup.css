@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 340px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #ffffff;
+  color: #1e1e1e;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #000091;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.title-group h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000091;
+  letter-spacing: -0.2px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 11px;
+  color: #666;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+/* Search */
+.search-section {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.input-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 10px 12px 10px 34px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #1e1e1e;
+  background: #fafafa;
+  transition: border-color 0.15s, background 0.15s;
+  outline: none;
+}
+
+#searchInput:focus {
+  border-color: #000091;
+  background: #fff;
+}
+
+#searchInput::placeholder {
+  color: #aaa;
+}
+
+#searchBtn {
+  padding: 10px 16px;
+  background: #000091;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+#searchBtn:hover {
+  background: #0000b8;
+}
+
+#searchBtn:active {
+  background: #00006b;
+}
+
+/* Info box */
+.info {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #f6f6f6;
+  border-radius: 6px;
+  border-left: 3px solid #000091;
+  margin-bottom: 16px;
+}
+
+.info svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.info span {
+  font-size: 11.5px;
+  color: #555;
+  line-height: 1.5;
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  font-size: 10.5px;
+  font-family: inherit;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #ddd;
+}
+
+/* History */
+.history {
+  margin-bottom: 12px;
+}
+
+.history.hidden {
+  display: none;
+}
+
+.history h2 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #999;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+#historyList {
+  list-style: none;
+}
+
+#historyList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  font-size: 12.5px;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+#historyList li:hover {
+  background: #f0f0f5;
+}
+
+#historyList li .term {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#historyList li .arrow {
+  color: #000091;
+  font-size: 14px;
+  margin-left: 8px;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+#historyList li:hover .arrow {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.footer-text {
+  font-size: 10.5px;
+  color: #aaa;
+  letter-spacing: 0.3px;
+}
